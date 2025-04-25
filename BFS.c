@@ -11,12 +11,12 @@ void BFS(int arr[][max],int s,int size){
     queue[++rear]=s;
     front++;
     visited[s]=1;
-    while(rear>front){
+    while(rear>=front){
         s=queue[front++];
         printf("%c--",s+65);
         for(int i=0;i<size;i++){
             if(arr[s][i] &&visited[i]==0){
-                queue[rear++]=i;
+                queue[++rear]=i;
                 visited[i]=1;
             }
         }
