@@ -33,8 +33,8 @@ void heapsort(int a[], int n){
 }
 int main(){
     int n;
-    scanf("%d",&n);
     printf("Enter Heap Size: ");
+    scanf("%d",&n);
     int a[n];
     printf("\nEnter Numbers: ");
     for(int i=1;i<=n;i++){
@@ -42,12 +42,12 @@ int main(){
     }
     printf("Array Before sort: ");
     for(int i=1;i<=n;i++){
-        printf("%d",a[i]);
+        printf("%d ",a[i]);
     }
     heapsort(a,n);
     printf("Array after sort: ");
     for(int i=1;i<=n;i++){
-        printf("%d",a[i]);
+        printf("%d ",a[i]);
     }
     return 0;
 }
