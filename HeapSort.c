@@ -1,14 +1,18 @@
 #include<stdio.h>
-void maxheapify(int a[], int i){
-    
-
+void maxheapify(int a[], int i, int size){
+    int l=2*i;
+    int r=(2*i)+1;
+    int largest;
+    if(l<=size && a[l]>a[largest]) swap(a[l], a[largest]);
+    else largest=i;
+    if(r<=size && a[r]>a[largest]) swap(a[r], a[largest]);
 }
 void heapsort(int a, int n){
     //MaxHeap Creation Start :(
     for(int i=n/2; i>=1; i--){
-        maxheapify(a,i);
+        maxheapify(a,i,n);
     }
-
+     //MaxHeap Creation Ends :)
 }
 int main(){
     int n;
