@@ -36,7 +36,7 @@ void heapsort(int a[], int n){
         maxheapify(a,1,n);    //O(logn)
      }
 }
-//total time complexity for heapsort: O(nlogn)//
+
 
 int main(){
     int n;
@@ -59,4 +59,8 @@ int main(){
     }
     return 0;
 }
-// at line 33 We stop at 2 because when only one element remains (at index 1), it's already in its correct place.
+/*note:   
+    at line 33 We stop at 2 because when only one element remains (at index 1), it's already in its correct place.
+    total time complexity for heapsort: O(nlogn) explantion done above !!
+*/
+
