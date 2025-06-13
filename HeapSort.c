@@ -1,6 +1,13 @@
 #include<stdio.h>
-void heapsort(int a, int i){
+void maxheapify(int a[], int i){
     
+
+}
+void heapsort(int a, int n){
+    //MaxHeap Creation Start :(
+    for(int i=n/2; i>=1; i--){
+        maxheapify(a,i);
+    }
 
 }
 int main(){
@@ -16,7 +23,7 @@ int main(){
     for(int i=1;i<=n;i++){
         printf("%d",a[i]);
     }
-    heapsort(a,1);
+    heapsort(a,n);
     printf("Array after sort: ");
     for(int i=1;i<=n;i++){
         printf("%d",a[i]);
