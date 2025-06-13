@@ -2,10 +2,16 @@
 void maxheapify(int a[], int i, int size){
     int l=2*i;
     int r=(2*i)+1;
-    int largest;
+    int largest=i;
     if(l<=size && a[l]>a[largest]) swap(a[l], a[largest]);
-    else largest=i;
     if(r<=size && a[r]>a[largest]) swap(a[r], a[largest]);
+
+    if(largest!=i){
+        swap(a[i],a[largest]);
+        maxheapify(a,largest,size);
+    }
+
+
 }
 void heapsort(int a, int n){
     //MaxHeap Creation Start :(
