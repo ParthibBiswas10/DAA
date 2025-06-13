@@ -61,6 +61,6 @@ int main(){
 }
 /*note:   
     at line 33 we run that loop upto 2 because when only one element remains (at index 1), it's already in its correct place.
-    total time complexity for heapsort: O(nlogn) explantion done above !!
+    total time complexity for heapsort: O(nlogn) explanied  above !!
 */
 
