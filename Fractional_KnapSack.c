@@ -6,6 +6,7 @@ void knapsack(int n, float w[], float p[], float r[]){
     scanf("%d",&cap);
     int u=cap;
     float x[n];
+    for(int j=0; j<n; j++) x[j] = 0;
     int i;
    
     for(i=0;i<n;i++){
@@ -14,23 +15,25 @@ void knapsack(int n, float w[], float p[], float r[]){
             x[i]=1;
             u=u-w[i];
         }
+        else{
+            break;
+        }
 
     }
-    if(i<n){
+    if(i<n && u>0){
         x[i]=u/w[i];
-        tp=tp+x[i]*p[i];
+        tp=tp+(x[i]*p[i]);
         u=0;
     }
 
-    printf("Weight  Profit    ResultVector");
-     printf("\n");
+    printf("Weight  Profit    ResultVector\n");
     for(int i=0;i<n;i++){
         printf("%.1f      ",w[i]);
         printf("%.1f      ",p[i]);
         printf("%.2f      ",x[i]);
         printf("\n");
     }
-    printf("Total Profit: %f",tp);
+    printf("Total Profit: %.2f",tp);
 }
 
 
