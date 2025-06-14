@@ -3,7 +3,7 @@ int main(){
     int n;
     printf("Enter number of objects : ");
     scanf("%d",&n);
-    int weight[n], profit[n];
+    float weight[n], profit[n];
     float ratio[n];
   
     for(int i=0;i<n;i++){
@@ -21,7 +21,7 @@ int main(){
     for(int i=0;i<n;i++){
         for(int j=i+1;j<n;j++){
             if(ratio[i]<ratio[j]){
-                int temp=ratio[j];
+                float temp=ratio[j];
                 ratio[j]=ratio[i];
                 ratio[i]=temp;
 
