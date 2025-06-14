@@ -59,7 +59,7 @@ int main(){
     }
     return 0;
 }
-/*note:   
+/*Ankara Messi notes:   
     At line 33 we run that loop upto 2 because when only one element remains (at index 1), it's already in its correct place.
     total time complexity for heapsort: O(nlogn) explanied  above !!
 */
