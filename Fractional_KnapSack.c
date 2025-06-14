@@ -36,11 +36,12 @@ int main(){
         }
     }
     printf("Weight  Profit  Ratio");
+     printf("\n");
     for(int i=0;i<n;i++){
         printf("%d  ",weight[i]);
         printf("%d  ",profit[i]);
         printf("%d  ",ratio[i]);
-        
+        printf("\n");
     }
 
 }
