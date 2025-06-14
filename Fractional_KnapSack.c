@@ -2,11 +2,12 @@
 void knapsack(int n, float w[], float p[], float r[]){
     int cap;
     float tp=0;
+    printf("Enter Capacity of KnapSack: ");
+    scanf("%d",&cap);
     int u=cap;
     float x[n];
     int i;
-    printf("Enter Capacity of KnapSack: ");
-    scanf("%d",&cap);
+   
     for(i=0;i<n;i++){
         if(w[i]<u){
             tp=tp+p[i];
