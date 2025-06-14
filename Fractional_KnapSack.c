@@ -1,4 +1,30 @@
 #include<stdio.h>
+void knapsack(int n, float w[], float p[], float r[]){
+    int cap,tp=0;
+    int u=cap;
+    int x[n];
+    int i;
+    printf("Enter Capacity of KnapSack: ");
+    scanf("%d",&cap);
+    for(i=0;i<n;i++){
+        if(w[i]<u){
+            tp=tp+p[i];
+            x[i]=1;
+            u=u-w[i];
+        }
+
+    }
+    if(i<n){
+        x[i]=u/w[i];
+        tp=tp+x[i]*p[i];
+        u=0;
+    }
+
+    
+
+}
+
+
 int main(){
     int n;
     float temp;
@@ -17,6 +43,7 @@ int main(){
     for(int i=0;i<n;i++){
         ratio[i]=profit[i]/weight[i];
     }
+
     //Sort items acc to decending order of pw ratio: 
 
     for(int i=0;i<n;i++){
@@ -44,5 +71,5 @@ int main(){
         printf("%.2f      ",ratio[i]);
         printf("\n");
     }
-
+    knapsack(n,weight,profit,ratio);
 }
