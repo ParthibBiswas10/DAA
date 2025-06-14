@@ -1,6 +1,7 @@
 #include<stdio.h>
 int main(){
     int n;
+    float temp;
     printf("Enter number of objects : ");
     scanf("%d",&n);
     float weight[n], profit[n];
@@ -8,9 +9,9 @@ int main(){
   
     for(int i=0;i<n;i++){
         printf("wight of item %d: ",i+1);
-        scanf("%d",&weight[i]);
+        scanf("%f",&weight[i]);
         printf("profit of item %d: ",i+1);
-        scanf("%d",&profit[i]);
+        scanf("%f",&profit[i]);
     }
 
     for(int i=0;i<n;i++){
@@ -21,7 +22,7 @@ int main(){
     for(int i=0;i<n;i++){
         for(int j=i+1;j<n;j++){
             if(ratio[i]<ratio[j]){
-                float temp=ratio[j];
+                temp=ratio[j];
                 ratio[j]=ratio[i];
                 ratio[i]=temp;
 
@@ -35,12 +36,12 @@ int main(){
             }
         }
     }
-    printf("Weight  Profit  Ratio");
+    printf("Weight  Profit    Ratio");
      printf("\n");
     for(int i=0;i<n;i++){
-        printf("%d  ",weight[i]);
-        printf("%d  ",profit[i]);
-        printf("%d  ",ratio[i]);
+        printf("%.1f      ",weight[i]);
+        printf("%.1f      ",profit[i]);
+        printf("%.2f      ",ratio[i]);
         printf("\n");
     }
 
