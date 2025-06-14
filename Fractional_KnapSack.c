@@ -1,8 +1,9 @@
 #include<stdio.h>
 void knapsack(int n, float w[], float p[], float r[]){
-    int cap,tp=0;
+    int cap;
+    float tp=0;
     int u=cap;
-    int x[n];
+    float x[n];
     int i;
     printf("Enter Capacity of KnapSack: ");
     scanf("%d",&cap);
@@ -20,8 +21,15 @@ void knapsack(int n, float w[], float p[], float r[]){
         u=0;
     }
 
-    
-
+    printf("Weight  Profit    ResultVector");
+     printf("\n");
+    for(int i=0;i<n;i++){
+        printf("%.1f      ",w[i]);
+        printf("%.1f      ",p[i]);
+        printf("%.2f      ",x[i]);
+        printf("\n");
+    }
+    printf("Total Profit: %f",tp);
 }
 
 
