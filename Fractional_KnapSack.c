@@ -25,11 +25,11 @@ int main(){
                 ratio[j]=ratio[i];
                 ratio[i]=temp;
 
-                int temp=weight[j];
+                temp=weight[j];
                 weight[j]=weight[i];
                 weight[i]=temp;
 
-                int temp=profit[j];
+                temp=profit[j];
                 profit[j]=profit[i];
                 profit[i]=temp;
             }
