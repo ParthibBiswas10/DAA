@@ -4,6 +4,12 @@ struct Job {
     int deadline; 
     int profit;  
 };
+void js(int n, struct Job j[]);
+
+int findMin(int x, int y){
+    if(x<y) return x;
+    else return y;
+}
 int main(){
     int n;
     printf("Enter no of Jobs: ");
@@ -20,8 +26,8 @@ int main(){
         scanf("%d", &j[i].profit);
     }
     printf("\n\n");
-//Sort the jobs based on profit in descending order
 
+//Sort the jobs based on profit in descending order(Used Bubble Sort here)
     for(int i=0;i<n-1;i++){
         for(int k=0;k<n-1-i;k++){
             if(j[k].profit<j[k+1].profit){
@@ -35,5 +41,9 @@ int main(){
     for(int i=0;i<n;i++){
         printf("%s   %d   %d\n", j[i].id, j[i].deadline, j[i].profit);
     }
+    js(n, j);
     return 0;
+}
+void js(int n, struct Job j[]){
+
 }
