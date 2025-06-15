@@ -45,5 +45,27 @@ int main(){
     return 0;
 }
 void js(int n, struct Job j[]){
-
+    int dmax=0,k;
+    for(int i=0;i<n;i++){
+        if(j[i].deadline>dmax){
+            dmax=j[i].deadline;
+        }
+    }
+    printf("Max Deadline : %d",dmax);
+    int TimeSlot[dmax];
+    for(int i = 0; i < dmax; i++) {
+        TimeSlot[i] = -1;
+    }
+    for(int i=0;i<n;i++)
+    {
+        k=j[i].deadline;
+        while(k>=1){
+            if(TimeSlot[i]==-1){
+                TimeSlot[i]=i;
+                break;
+            }
+            k--;
+        }
+    }
+    
 }
