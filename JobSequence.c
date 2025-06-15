@@ -73,3 +73,11 @@ void js(int n, struct Job j[]){
     }
 
 }
+
+/*Ankara Messi Notes: 
+    in line 71: j[TimeSlot[i]].id means: j[0].id, j[4].id etc
+    if TimeSlot[0]=0 then j[0].id
+    if TimeSlot[1]=4 then j[4].id 
+    this means, 0th index position e job 0 ache, 1th index pos e job 4 ache !! gg :)
+
+*/
