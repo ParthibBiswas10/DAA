@@ -56,16 +56,20 @@ void js(int n, struct Job j[]){
     for(int i = 0; i < dmax; i++) {
         TimeSlot[i] = -1;
     }
-    for(int i=0;i<n;i++)
+    for(int i=0;i<n;i++) //This loop denotes the job number
     {
         k=j[i].deadline;
         while(k>=1){
-            if(TimeSlot[i]==-1){
-                TimeSlot[i]=i;
+            if(TimeSlot[k]==-1){
+                TimeSlot[k]=i;  //this line denotes : the timeslot in which i th job  will be stored
                 break;
             }
             k--;
         }
     }
-    
+    for(int i=0; i<n; i++){
+        printf("%s",j[TimeSlot[i]].id); 
+        if(i<n) printf("->");
+    }
+
 }
