@@ -1,20 +1,34 @@
 #include<stdio.h>
 #define max 100
-int parent[max][3];
+int parent[max];
 int find(int a){
     if(parent[a]!=a){
         parent[a]=find(parent[a]);
     }
+    return parent[a];
 }
-void union_set(int u, int v, int parent[]){
+void union_set(int u, int v){
     int rootu = find(u);
     int rootv = find(v);
     if(rootu!=rootv)   parent[rootv] = rootu;
   
 }
-
+//sort in increasing order based on weight
+void sort(int graph[][3], int E) {
+    for (int i = 0; i < E - 1; i++) {
+        for (int j = 0; j < E - i - 1; j++) {
+            if (graph[j][2] > graph[j+1][2]) {
+                for (int k = 0; k < 3; k++) {
+                    int temp = graph[j][k];
+                    graph[j][k] = graph[j+1][k];
+                    graph[j+1][k] = temp;
+                }
+            }
+        }
+    }
+}
 void kruskal(int v, int e, int graph[][3]){
-    int parent[e];
+    
     int count=0;
     int toal=0;
     int u,v,w;
