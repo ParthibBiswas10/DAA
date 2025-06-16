@@ -37,8 +37,7 @@ void kruskal(int vertex, int e, int graph[][3]){
         parent[i] = i;
 
     sort(graph, e);
-    for(int i=0;i<e && count<vertex-1;i++){    //i tracks how many edges we’ve checked from the full list (total E edges) and count tracks how many edges we’ve added to MST (goal: V - 1)
-                             
+    for(int i=0;i<e && count<vertex-1;i++){   
         u=graph[i][0];
         v=graph[i][1];
         w=graph[i][2];
@@ -76,3 +75,9 @@ int main(){
     }
     kruskal(v, e, graph);
 }
+
+/*Ankara Messi NOtes: 
+    at line 47-50, we did mst[count][] not mst[i][] coz i is the index in all edges, not the MST!
+    at line 40 , i tracks how many edges we’ve checked from the full list (total E edges) and count tracks how many edges we’ve added to MST (goal: V - 1)
+                             
+*/
