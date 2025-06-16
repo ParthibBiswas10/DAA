@@ -10,7 +10,7 @@ int minkey(int key[],int v,int visited[]){
     }
     return minIndex;
 }
-void prims(int graph[][],int v){
+void prims(int graph[][100],int v){
     int parent[v];
     int key[v];
     int visited[v];
@@ -22,6 +22,12 @@ void prims(int graph[][],int v){
     parent[0]=-1;
     for(int i=0;i<v;i++){
         int u=minkey(key,v,visited);
+        visited[u]=1;
+        for(int j=0;j<v;j++){
+            if(graph[u][j] && visited[j]==0 && graph[u][j]<key[j]){
+                
+            }
+        }
     }
 
 }
