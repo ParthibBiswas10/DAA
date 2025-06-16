@@ -30,7 +30,7 @@ void sort(int graph[][3], int E) {
 void kruskal(int v, int e, int graph[][3]){
     
     int count=0;
-    int toal=0;
+    int total=0;
     int u,v,w;
     int mst[e][3];
      for (int i = 0; i <v; i++)
@@ -49,11 +49,17 @@ void kruskal(int v, int e, int graph[][3]){
             mst[i][2]=w;    
             count++;
             union_set(u,v); 
-            toal+=w;
+            total+=w;
 
         }
 
     }
+    printf("\nMST edges: \n");
+    for(int i=0;i<count;i++){
+        printf("%d -- %d -- %d ",mst[i][0], mst[i][1], mst[i][2]);
+        printf("\n");
+    }
+    printf("Total Weight of MST: %d\n", total);
 
 }
 int main(){
