@@ -2,7 +2,7 @@
 #include <limits.h>
 
 int minkey(int key[], int v, int visited[]) {
-    int min = INT_MAX, minIndex = -1;
+    int min = 999, minIndex = -1;
     for (int i = 0; i < v; i++) {
         if (!visited[i] && key[i] < min) {
             min = key[i];
@@ -18,14 +18,14 @@ void prims(int graph[][100], int v) {
     int visited[v];
 
     for (int i = 0; i < v; i++) {
-        key[i] = INT_MAX;
+        key[i] = 999;
         visited[i] = 0;
     }
 
     key[0] = 0;         
     parent[0] = -1;
 
-    for (int count = 0; count < v - 1; count++) {
+    for (int count = 0; count < v; count++) {
         int u = minkey(key, v, visited);
         visited[u] = 1;
 
