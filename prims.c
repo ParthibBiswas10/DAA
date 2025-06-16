@@ -34,8 +34,9 @@ void prims(int graph[][100],int v){
     }
     //Print of MST:
     for(int i=0;i<v;i++){
-        
+        printf("%d--%d--%d",parent[i],i,key[i]);
     }
+    printf("Min Cost: %d",total);
 
 }
 
