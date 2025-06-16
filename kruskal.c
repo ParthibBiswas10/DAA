@@ -27,26 +27,26 @@ void sort(int graph[][3], int E) {
         }
     }
 }
-void kruskal(int v, int e, int graph[][3]){
+void kruskal(int vertex, int e, int graph[][3]){
     
     int count=0;
     int total=0;
     int u,v,w;
     int mst[e][3];
-     for (int i = 0; i <v; i++)
+     for (int i = 0; i <vertex; i++)
         parent[i] = i;
 
     sort(graph, e);
-    for(int i=0;i<e && count<v-1;i++){    //i tracks how many edges we’ve checked from the full list (total E edges) and count tracks how many edges we’ve added to MST (goal: V - 1)
+    for(int i=0;i<e && count<vertex-1;i++){    //i tracks how many edges we’ve checked from the full list (total E edges) and count tracks how many edges we’ve added to MST (goal: V - 1)
                              
         u=graph[i][0];
         v=graph[i][1];
         w=graph[i][2];
 
         if(find(u)!=find(v)){
-            mst[i][0]=u;
-            mst[i][1]=v;
-            mst[i][2]=w;    
+            mst[count][0]=u;
+            mst[count][1]=v;
+            mst[count][2]=w;    
             count++;
             union_set(u,v); 
             total+=w;
