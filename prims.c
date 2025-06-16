@@ -1,6 +1,18 @@
 #include<stdio.h>
-void prims(){
-    
+void prims(int graph[][],int v){
+    int parent[v];
+    int key[v];
+    int visited[v];
+    for(int i=0;i<v;i++){
+        key[i]=999;
+        visited[i]=0;
+    }
+    key[0]=0;
+    parent[0]=-1;
+    for(int i=0;i<v;i++){
+        
+    }
+
 }
 
 int main(){
@@ -17,6 +29,6 @@ int main(){
         scanf("%d", graph[i][j]);
         }
     }
-    prims(v, e, graph);
+    prims(graph,v);
 
 }
