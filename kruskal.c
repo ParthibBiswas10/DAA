@@ -78,6 +78,7 @@ int main(){
 
 /*Ankara Messi NOtes: 
     at line 47-50, we did mst[count][] not mst[i][] coz i is the index in all edges, not the MST!
+    
     at line 40 , i tracks how many edges we’ve checked from the full list (total E edges) and count tracks how many edges we’ve added to MST (goal: V - 1)
     
     at line 21, 3 loops needed...the 3rd loop is required because Without the k loop, we can only swap the weights and not the vertices, We use k to swap all 3 values of each edge (source, destination, weight) so the edge order stays correct when sorting by weight.                     
