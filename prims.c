@@ -1,4 +1,15 @@
 #include<stdio.h>
+int minkey(int key[],int v,int visited[]){
+    int min=999;
+    int minIndex;
+    for(int i=0;i<v;i++){
+        if(visited[i]==0 && key[i]<min){
+            min=key[i];
+            minIndex=i;
+        }
+    }
+    return minIndex;
+}
 void prims(int graph[][],int v){
     int parent[v];
     int key[v];
@@ -10,7 +21,7 @@ void prims(int graph[][],int v){
     key[0]=0;
     parent[0]=-1;
     for(int i=0;i<v;i++){
-        
+        int u=minkey(key,v,visited);
     }
 
 }
