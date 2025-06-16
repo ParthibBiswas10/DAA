@@ -19,15 +19,22 @@ void prims(int graph[][100],int v){
         visited[i]=0;
     }
     key[0]=0;
+    int total=0;
     parent[0]=-1;
     for(int i=0;i<v;i++){
         int u=minkey(key,v,visited);
         visited[u]=1;
         for(int j=0;j<v;j++){
             if(graph[u][j] && visited[j]==0 && graph[u][j]<key[j]){
-                
+                parent[j]=u;
+                key[j]=graph[u][j];
+                total+=key[j];
             }
         }
+    }
+    //Print of MST:
+    for(int i=0;i<v;i++){
+        
     }
 
 }
