@@ -1,9 +1,17 @@
 #include<stdio.h>
 #define inf 999
+int v=4; //for this graph;
 int graph[4][4];
 int parent[4][4];
 int distance[4][4];
+void floyd(int graph[][4]){
+    initialize(graph);
+    for(int k=0;k<v;k++){
+        
+    }
+}
 int main(){
+    //Weighted Directed Graph input: 
     for(int i=0;i<4;i++){
         for(int j=0;j<4;j++){
             scanf("%d ",&graph[i][j]);
