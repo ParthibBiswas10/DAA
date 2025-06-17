@@ -8,6 +8,8 @@ void initialize(int graph[][v]){
     for(int i=0;i<v;i++){
         for(int j=0;j<v;j++){
             distance[i][j]=graph[i][j];
+            if(i==j|| graph[i][j]==inf) parent[i][j]=-1;
+            else parent[i][j]=i;
         }
     }
 }
