@@ -1,65 +1,30 @@
 #include<stdio.h>
-int minkey(int key[],int v,int visited[]){
-    int min=999;
-    int minIndex=-1;
-    for(int i=0;i<v;i++){
-        if(visited[i]==0 && key[i]<min){
-            min=key[i];
-            minIndex=i;
-        }
+#include<stdlib.h>
+int x[10];
+int safe(int k, int i){
+    for(int j=1;j<k;j++){
+        if(x[j]==i || abs(x[j]-i)==abs(j-k)) return 0;
     }
-    return minIndex;
+    return 1;
 }
-void prims(int graph[][100],int v){
-    int parent[v];
-    int key[v];
-    int visited[v];
-    for(int i=0;i<v;i++){
-        key[i]=999;
-        visited[i]=0;
-    }
-    key[0]=0;
-    int total=0;
-    parent[0]=-1;
-    for(int i=0;i<v;i++){
-        int u=minkey(key,v,visited);
-         if(u == -1) {
-        printf("Graph is disconnected. MST cannot be formed.\n");
-        return;
-    }
-        visited[u]=1;
-        for(int j=0;j<v;j++){
-            if(graph[u][j]  && visited[j]==0 && graph[u][j]<key[j]){
-                parent[j]=u;
-                key[j]=graph[u][j];
-                
+void nqueen(int k,int n){
+    for(int i=1;i<=n;i++){
+        if(safe(k,i)){
+            x[k]=i;
+            if(k==n){
+                for(int i=1;i<=n;i++){
+                    printf("%d",x[i]);
+                }
+                printf("\n");
             }
+            else nqueen(k+1,n);
         }
     }
-    //Print of MST:
-    for(int i=1;i<v;i++){
-        printf("%d--%d--%d\n",parent[i],i,key[i]);
-    }
-    for(int i=1;i<v;i++) {
-        total+=key[i];}
-    printf("Min Cost: %d",total);
-
 }
-
 int main(){
-    int v,e;
-    
-    printf("Enter no of Vertices: ");
-    scanf("%d",&v);
-     //printf("Enter no of Edges: ");
-    //scanf("%d",&e);
-    int graph[v][v];
-    printf("Enter Adjacency Matrix:\n");
-    for(int i=0;i<v;i++){
-        for(int j=0;j<v;j++){
-        scanf("%d", &graph[i][j]);
-        }
-    }
-    prims(graph,v);
+    int n;
+    printf("Enter Number of Queens: ");
+    scanf("%d",&n);
+    nqueen(1,n);
 
 }
