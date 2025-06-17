@@ -44,8 +44,16 @@ void printDistance(){
         printf("\n");
     }
 }
-void printPath(){
-    
+void printAllPath(){
+    for(int i=0;i<v;i++){
+        for(int j=0;j<v;j++){
+            printf("Path from %d to %d: ",i,j);
+            if(distance[i][j]==inf) printf("no path");
+            else{
+                printPath(i,j);
+            }
+        }
+    }
 }
 int main(){
     //Weighted Directed Graph input: 
@@ -58,6 +66,6 @@ int main(){
     floyd(graph);
     printDistance();
     printParent();
-    printPath();
+    printAllPath();
 
 }
