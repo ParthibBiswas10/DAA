@@ -1,8 +1,8 @@
 #include<stdio.h>
 #define inf 999
-int v=4; //for this graph;
-int graph[4][4];
-int parent[4][4];
+#define v 4 //for this graph;
+int graph[v][v];
+int parent[v][v];
 int distance[4][4];
 void initialize(int graph[][v]){
     for(int i=0;i<v;i++){
@@ -26,12 +26,31 @@ void floyd(int graph[][4]){
         }
     }
 }
+void printParent(){
+    printf("Parent Matrix: \n");
+    for(int i=0;i<v;i++){
+        for(int j=0;j<v;j++){
+            printf("%d ",parent[i][j]);
+        }
+        printf("\n");
+    }
+}
+void printDistance(){
+     printf("Distance Matrix: \n");
+     for(int i=0;i<v;i++){
+        for(int j=0;j<v;j++){
+            printf("%d ",distance[i][j]);
+        }
+        printf("\n");
+    }
+}
 int main(){
     //Weighted Directed Graph input: 
-    for(int i=0;i<4;i++){
-        for(int j=0;j<4;j++){
+    for(int i=0;i<v;i++){
+        for(int j=0;j<v;j++){
             scanf("%d ",&graph[i][j]);
         }
+        printf("\n");
     }
     floyd(graph);
     printDistance();
