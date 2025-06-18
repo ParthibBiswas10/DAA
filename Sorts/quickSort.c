@@ -18,12 +18,12 @@ int partition(int arr[],int s, int e){
         }
     }
    swap(&arr[s],&arr[i]);
-    return pivot;
+    return i;
 }
 void quicksort(int arr[], int i, int j){
     if(i<j){
         int m=partition(arr,i,j);
-        quicksort(arr,i,m);
+        quicksort(arr,i,m-1);
         quicksort(arr,m+1,j);
     }
 }
