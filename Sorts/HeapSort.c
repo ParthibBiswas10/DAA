@@ -10,11 +10,13 @@ void maxheapify(int a[], int i, int size){
     int largest=i;
     if(l<=size && a[l]>a[largest]) {
         largest=l;
-        swap(&a[l], &a[largest]);}
+        //swap(&a[l], &a[largest]);
+        }
 
     if(r<=size && a[r]>a[largest]) {
         largest= r;
-        swap(&a[r], &a[largest]);}
+        //swap(&a[r], &a[largest]);
+        }
 
     if(largest!=i){
         swap(&a[i],&a[largest]);
