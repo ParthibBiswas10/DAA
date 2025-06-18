@@ -37,3 +37,12 @@ int main(){
     printf("Max element: %d\n",max);
      printf("Min element: %d\n",min);
 }
+
+/*notes:
+    When you pass &max1, you are passing the address of max1 into the function.
+    Inside the function, *max means:
+    “Access the variable whose address was passed — i.e., max1.”
+    So *max = 42; inside the function means:
+    “Store 42 into the paseed address which belongs to max1, because we passed &max1.”
+
+*/
