@@ -1,5 +1,26 @@
 #include<stdio.h>
-int main(){
+void merge(int arr[],int i, int mid, int j{
     
+})
+void mergesort(int arr[],int i, int j){
+    if(i<j){
+        int mid=(i+j)/2;
+        mergesort(arr,i,mid);
+        mergesort(arr,mid+1,j);
+        merge(arr,i,mid,j);
+    }
+}
+int main(){
+     int n;
+    printf("Enter Array Size: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter Array: \n");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int i=0;
+    int j=n-1; //as array range 0 - (n-1)
+    mergesort(arr,i,j);
 
 }
