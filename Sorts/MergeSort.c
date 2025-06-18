@@ -1,7 +1,14 @@
 #include<stdio.h>
-void merge(int arr[],int i, int mid, int j{
-    
-})
+void merge(int arr[],int start , int mid, int end){
+    int n1=mid-start+1;
+    int n2=end-mid;
+    int left[n1];
+    int right[n2];
+    for(int i=0;i<n1;i++) left[i]=arr[i];
+    for(int i=0;i<n2;i++) right[i]=arr[mid+1+i];
+
+    while()
+}
 void mergesort(int arr[],int i, int j){
     if(i<j){
         int mid=(i+j)/2;
