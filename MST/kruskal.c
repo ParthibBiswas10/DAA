@@ -13,7 +13,7 @@ void union_set(int u, int v){
     if(rootu!=rootv)   parent[rootv] = rootu;
   
 }
-//sort in increasing order based on weight
+//sort in increasing order based on weight: 
 void sort(int graph[][3], int E) {
     for (int i = 0; i < E - 1; i++) {
         for (int j = 0; j < E - i - 1; j++) {
