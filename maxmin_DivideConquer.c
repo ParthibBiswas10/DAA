@@ -44,5 +44,5 @@ int main(){
     “Access the variable whose address was passed — i.e., max1.”
     So *max = 42; inside the function means:
     “Store 42 into the paseed address which belongs to max1, because we passed &max1.”
-
+    TC: O(n)
 */
