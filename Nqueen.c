@@ -15,7 +15,7 @@ void nqueen(int k,int n){
                 for(int i=1;i<=n;i++){
                     printf("%d",x[i]);
                 }
-                printf("\n ");
+                printf("\n");
             }
             else nqueen(k+1,n);
         }
