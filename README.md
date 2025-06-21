@@ -29,6 +29,7 @@
 ### 🔹 Divide and Conquer
 
 - **Maximum-Minimum Problem**
+- **Merge Sort**
 
 ### 🔹 Backtracking
 
