@@ -28,3 +28,9 @@ int main(){
     nqueen(1,n);
 
 }
+
+/*
+Time Complexity: 
+    Brute Force	- O(N^N)
+    Backtracking- 	O(N!)
+*/
