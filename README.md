@@ -1,37 +1,42 @@
 # DAA
 
-DAA (Decoding Algorithms Aggressively ) stuffs inside !!
-
 📌 Topics Covered
-🔹 Graph Traversal
+
+🔹 Graph Traversal:
 BFS (Breadth-First Search)
 
 DFS (Depth-First Search)
 
-🔹 Minimum Spanning Tree (MST)
+🔹 Minimum Spanning Tree (MST):
+
 Kruskal’s Algorithm
 
 Prim’s Algorithm
 
-🔹 Optimization Problems
+🔹 Optimization Problems:
+
 Fractional Knapsack Problem
 
 Job Sequencing with Deadlines
 
-🔹 Shortest Path Algorithms
+🔹 Shortest Path Algorithms:
+
 Dijkstra’s Algorithm
 
 Floyd-Warshall Algorithm
 
-🔹 Sorting Algorithms
+🔹 Sorting Algorithms:
+
 Heap Sort
 
 Merge Sort
 
 Quick Sort
 
-🔹 Divide and Conquer
+🔹 Divide and Conquer:
+
 Maximum-Minimum Problem
 
-🔹 Backtracking
+🔹 Backtracking:
+
 N-Queens Problem
