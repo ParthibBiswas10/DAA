@@ -32,5 +32,5 @@ int main(){
 /*
 Time Complexity: 
     Brute Force	- O(N^N)
-    Backtracking- 	O(N!)
+    Backtracking- O(N!)
 */
