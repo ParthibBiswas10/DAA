@@ -1,33 +1,35 @@
-📌 Topics Covered
-🔹 Graph Traversal
-BFS (Breadth-First Search)
+## 📌 Topics Covered
 
-DFS (Depth-First Search)
+### 🔹 Graph Traversal
 
-🔹 Minimum Spanning Tree (MST)
-Kruskal’s Algorithm
+- **BFS** (Breadth-First Search)
+- **DFS** (Depth-First Search)
 
-Prim’s Algorithm
+### 🔹 Minimum Spanning Tree (MST)
 
-🔹 Optimization Problems
-Fractional Knapsack Problem
+- **Kruskal’s Algorithm**
+- **Prim’s Algorithm**
 
-Job Sequencing with Deadlines
+### 🔹 Optimization Problems
 
-🔹 Shortest Path Algorithms
-Dijkstra’s Algorithm
+- **Fractional Knapsack Problem**
+- **Job Sequencing with Deadlines**
 
-Floyd-Warshall Algorithm
+### 🔹 Shortest Path Algorithms
 
-🔹 Sorting Algorithms
-Heap Sort
+- **Dijkstra’s Algorithm**
+- **Floyd-Warshall Algorithm**
 
-Merge Sort
+### 🔹 Sorting Algorithms
 
-Quick Sort
+- **Heap Sort**
+- **Merge Sort**
+- **Quick Sort**
 
-🔹 Divide and Conquer
-Maximum-Minimum Problem
+### 🔹 Divide and Conquer
 
-🔹 Backtracking
-N-Queens Problem
+- **Maximum-Minimum Problem**
+
+### 🔹 Backtracking
+
+- **N-Queens Problem**
