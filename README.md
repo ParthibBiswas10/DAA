@@ -2,8 +2,8 @@
 
 ### 🔹 Graph Traversal
 
-- **BFS** (Breadth-First Search)
-- **DFS** (Depth-First Search)
+- **BFS**
+- **DFS**
 
 ### 🔹 Minimum Spanning Tree (MST)
 
