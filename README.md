@@ -33,4 +33,4 @@
 
 ### 🔹 Backtracking
 
-- **N-Queens Problem**
+- **N-Queen Problem**
